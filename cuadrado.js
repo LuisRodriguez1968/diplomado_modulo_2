@@ -14,4 +14,4 @@ function primera(Param1, Param2) {
         }
     }
 }
-primera(5,'N')
+primera(Param1=5)

@@ -1,10 +1,10 @@
-let Param1=5
-let Param2='x'
-
-function primera(Param1, Param2) {
-   let cadena = Param2
-   for (let i = 0; i < Param1; i++) {
-      console.log(cadena)
-   }
+function primera(param1){
+    console.log(typeof param1)
+    if (typeof param1 == 'number'){
+        console.log(`My number: ${param1}`)
+    }
+    else {
+        console.log("Not number")
+    }
 }
 primera()
