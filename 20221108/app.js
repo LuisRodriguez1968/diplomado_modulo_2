@@ -3,36 +3,36 @@ let nCards =
    {
        "title": "Card 1",
        "content": "Este es el texto que debe observarse en el card-text",
-       "buton": "Pulsame"
+       "button": "Pulsame"
    },
    {
        "title": "Card 2",
        "content": "Este es el texto que debe observarse en el card-text",
-       "buton": "Pulsame"
+       "button": "Pulsame"
    },
    {
        "title": "Card 3",
        "content": "Este es el texto que debe observarse en el card-text",
-       "buton": "Pulsame"
+       "button": "Pulsame"
    },
    {
        "title": "Card 4",
        "content": "Este es el texto que debe observarse en el card-text",
-       "buton": "Pulsame"
+       "button": "Pulsame"
    },
    {
        "title": "Card 5",
        "content": "Este es el texto que debe observarse en el card-text",
-       "buton": "Pulsame"
+       "button": "Pulsame"
    },
    {
        "title": "Card 6",
        "content": "Este es el texto que debe observarse en el card-text",
-       "buton": "Pulsame"
+       "button": "Pulsame"
    }
   ]
 
-   nCards.forEach(elemento => createCard(elemento.Card));
+
 
    const cards=document.getElementById('cards')
    cards.setAttribute('class',"card")
@@ -43,11 +43,11 @@ let nCards =
       const ppal=document.createElement("div")
       const cuerpo=document.createElement("div")
       const titulo=document.createElement("h5")
-      titulo.textContent="Titulo de la tarjeta"
+      titulo.textContent=elemento.title   
       const parrafo=document.createElement("p")
-      parrafo.textContent="este es texto para el parrafo"
+      parrafo.textContent=elemento.content
       const boton=document.createElement("b")
-      boton.textContent="este es boton"
+      boton.textContent=elemento.button
       const imagen=document.createElement("img")
        
       ppal.setAttribute('class',"card")
@@ -65,4 +65,4 @@ let nCards =
       fragment.appendChild(ppal)
       cards.appendChild(fragment)
    }
-   createCard();
+   nCards.forEach(elemento => createCard(elemento));
