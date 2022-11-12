@@ -26,13 +26,11 @@ let nCards =
    }
   ]
 
-   const cards=document.getElementById('id_cards')
-   cards.setAttribute('class',"card")
-   
- 
+   const row = document.getElementById('id_cards')
+
    const createCard = (elemento) => {
       const fragmento = document.createDocumentFragment();
-
+      const columna=document.createElement("div")
       const ppal=document.createElement("div")
       const cuerpo=document.createElement("div")
       const titulo=document.createElement("h5")
@@ -42,14 +40,12 @@ let nCards =
       const boton=document.createElement("b")
       boton.textContent=elemento.button
       const imagen=document.createElement("img")
-      imagen.src=elemento.jpg
-
-//      fragmento.setAttribute('class','card col-sm-12 col-md-3 col-lg-3 col-xl-3','style',"width: 16rem")   
+//      imagen.src=elemento.jpg
+    imagen.setAttribute("src", elemento.jpg)
+      columna.setAttribute('class',' col-sm-12 col-md-3 col-lg-3 col-xl-3','style',"width: 16rem")   
       ppal.setAttribute('class',"card")
       cuerpo.setAttribute('class',"card-body")
-//      imagen.setAttribute('src','cards.jpg','class','card-img-top')
       imagen.setAttribute('class',"card-img-top",'style',"width: 16rem")
-//      imagen.setAttribute("class","card col-sm-12 col-md-3 col-lg-3 col-xl-3 ", "style","width: 16rem;"
       titulo.setAttribute('class','card-title text-center')
       parrafo.setAttribute('class','card-text p-4')
       boton.setAttribute('class',"btn btn-primary")
@@ -59,7 +55,8 @@ let nCards =
       cuerpo.appendChild(titulo)
       cuerpo.appendChild(parrafo)
       cuerpo.appendChild(boton)
-      fragmento.appendChild(ppal)
-      cards.appendChild(fragmento)
+      columna.appendChild(ppal)
+      fragmento.appendChild(columna)
+      row.appendChild(fragmento)
    }
    nCards.forEach(elemento => createCard(elemento));
