@@ -1,0 +1,14 @@
+<label for="character">Digita un numero hasta 825:</label>
+
+<input type="number" #idCharacter>
+<button (click)="getCharacter(idCharacter.value)">Traer Personaje</button>
+
+<div class="card" style="width: 18rem;">
+
+    <div class="card-body">
+      <img [src]="characterInfo.image" alt="">
+      <h5 class="card-title">{{ characterInfo.name }}</h5>
+      <p class="card-text">{{ characterInfo.status }}</p>
+
+    </div>
+  </div>

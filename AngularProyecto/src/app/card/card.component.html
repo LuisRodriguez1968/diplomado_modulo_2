@@ -1,15 +1,15 @@
-<label for="character">Digita un numero hasta 825:</label>
+<label for="location">Digita un numero hasta 126:</label>
 
-<input type="number" #idCharacter>
-<button (click)="getCharacter(idCharacter.value)">Traer Personaje</button>
+<input type="number" #idLocation>
+<button (click)="getLocation(idLocation.value)">Traer Locación</button>
 
 <div class="card" style="width: 18rem;">
 
     <div class="card-body">
-      <img [src]="characterInfo.image" alt="">
-      <h5 class="card-title">{{ characterInfo.name }}</h5>
-      <p class="card-text">{{ characterInfo.status }}</p>
-
+      <!-- <img [src]="locationInfo.image" alt=""> -->
+      <h5 class="card-title">{{ locationInfo.name }}</h5>
+      <p class="card-text">{{ locationInfo.type }}</p>
+      <p class="card-text">{{ locationInfo.residents }}</p>
+      <p class="card-text">{{ locationInfo.residents.elemento }}</p>
     </div>
-
   </div>

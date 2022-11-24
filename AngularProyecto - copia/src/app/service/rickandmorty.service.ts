@@ -9,13 +9,7 @@ export class RickandmortyService {
   url: string = "https://rickandmortyapi.com/api/location/" 
   constructor(private client: HttpClient) {}
 
-  location(numero: string | number) {
+  character(numero: string | number) {
     return this.client.get(this.url+numero)   
   }
-
-  residents(numero: string | number) {
-    return this.client.get(this.url+numero)   
-  }
-
-
 }
